@@ -24,6 +24,8 @@ func inicio(w http.ResponseWriter, r *http.Request) {
 		Imagen:  "/static/img/uoc.png",
 	}
 
+	nombrePod, _ := os.Hostname()
+w.Header().Set("X-Pod-Name", nombrePod)
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
 	if err := plantilla.Execute(w, datos); err != nil {
