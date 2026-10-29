@@ -1,0 +1,6 @@
+.git
+*.md
+servidor
+servidor.exe
+Dockerfile
+.dockerignore
